@@ -589,6 +589,96 @@ img { max-width: 100%; display: block; }
   height: 60px;
 }
 
+/* ── Leaderboard — period tabs ─────────────────── */
+.lb-period-tabs {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.lb-tab {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text-muted);
+  cursor: pointer;
+  font-family: var(--font);
+  font-size: 0.875rem;
+  font-weight: 500;
+  padding: 8px 20px;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+.lb-tab:hover { color: var(--text); border-color: var(--accent-blue-light); }
+.lb-tab.active {
+  background: var(--accent-blue);
+  border-color: var(--accent-blue);
+  color: var(--text);
+}
+
+/* ── Leaderboard — loading / error ─────────────── */
+@keyframes lb-spin { to { transform: rotate(360deg); } }
+
+.lb-loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 64px 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+.lb-spinner {
+  width: 22px;
+  height: 22px;
+  border: 2px solid var(--border);
+  border-top-color: var(--accent-blue-light);
+  border-radius: 50%;
+  animation: lb-spin 0.75s linear infinite;
+  flex-shrink: 0;
+}
+
+.lb-error {
+  text-align: center;
+  padding: 64px 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  line-height: 2;
+}
+.lb-error button {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--accent-blue-light);
+  cursor: pointer;
+  font-family: var(--font);
+  font-size: 0.875rem;
+  padding: 6px 18px;
+  transition: border-color 0.15s;
+}
+.lb-error button:hover { border-color: var(--accent-blue-light); }
+
+/* ── Leaderboard — tool tag (gold, vs OS teal) ── */
+.lb-tool-tag {
+  background: var(--bg-elevated);
+  border: 1px solid rgba(200,160,40,0.25);
+  border-radius: 3px;
+  padding: 3px 8px;
+  font-size: 0.7rem;
+  color: var(--accent-gold);
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  letter-spacing: 0.03em;
+}
+
+/* ── Leaderboard — updated timestamp ───────────── */
+.lb-updated-note {
+  font-size: 0.72rem;
+  color: var(--text-dim);
+  text-align: right;
+  margin-top: -8px;
+  letter-spacing: 0.02em;
+}
+
 /* ── Divider ───────────────────────────────────── */
 .divider {
   border: none;
