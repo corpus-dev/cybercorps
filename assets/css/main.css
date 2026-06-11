@@ -79,10 +79,13 @@ img { max-width: 100%; display: block; }
 .logo-icon {
   display: flex;
   align-items: center;
+  justify-content: center;
   color: var(--accent-gold);
   flex-shrink: 0;
+  line-height: 0;
 }
-.logo-icon svg { display: block; }
+.logo-icon svg { display: block; width: 44px; height: 44px; }
+.logo-text { line-height: 1; }
 
 .site-nav {
   display: flex;
