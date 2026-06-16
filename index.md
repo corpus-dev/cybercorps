@@ -116,28 +116,16 @@ title: Головна
 
 <section id="join">
   <p class="sec-tag reveal">Долучитись</p>
-  <h2 class="reveal">Твої навички потрібні <span class="y">вже сьогодні</span></h2>
-  <p class="lead reveal d1">Приєднуйся до підрозділу — ми шукаємо людей за чотирма напрямами:</p>
-  <div class="join-roles">
-    <div class="role reveal">
-      <span class="role-id">UNIT-01</span>
-      <h3>Розвідка та OSINT</h3>
-      <p>Профілювання цілей, пошук вразливостей, аналіз інфраструктури агресора.</p>
+  <h2 class="reveal">Долучайся <span class="y">вже сьогодні</span></h2>
+  <div class="join-layout">
+    <div class="join-video reveal">
+      <video controls preload="metadata">
+        <source src="{{ site.baseurl }}/assets/video/cyberowl_user_guide.mp4" type="video/mp4">
+      </video>
     </div>
-    <div class="role reveal d1">
-      <span class="role-id">UNIT-02</span>
-      <h3>Кіберудари</h3>
-      <p>Скоординовані атаки: DDoS, дефейс, перебої сервісів.</p>
-    </div>
-    <div class="role reveal d2">
-      <span class="role-id">UNIT-03</span>
-      <h3>Аналітика</h3>
-      <p>Оцінка результатів, підготовка звітів, моніторинг ефективності операцій.</p>
-    </div>
-    <div class="role reveal d3">
-      <span class="role-id">UNIT-04</span>
-      <h3>Розробка</h3>
-      <p>Автоматизація атак, власні інструменти, внутрішні сервіси підрозділу.</p>
+    <div class="join-text">
+      <p class="lead reveal d1">Наша команда зробила все можливе щоб всі бажаючі могли приєднатися до боротьби в кібер просторі. Для цього маємо цілий набір інструментів, про які можна дізнатися на сторінці "Інструменти".</p>
+      <p class="lead reveal d2">Але якщо не знаєш з чого почати, то переглянь відео про сову — вона твій надійний квиток до спільноти що домінує роками у ворожому кібер просторі.</p>
     </div>
   </div>
 </section>

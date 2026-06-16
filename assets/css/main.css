@@ -431,6 +431,29 @@ h1 .outline {
   margin: 40px 0 56px;
 }
 
+.join-layout {
+  display: flex;
+  gap: 48px;
+  align-items: flex-start;
+  margin: 40px 0 56px;
+}
+.join-video {
+  flex: 0 0 58%;
+}
+.join-video video {
+  width: 100%;
+  display: block;
+  border: 1px solid var(--border);
+  background: #000;
+}
+.join-text {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.join-text .lead { margin: 0; }
+
 .role {
   border: 1px solid var(--line);
   background: rgba(16, 21, 12, 0.55);
@@ -892,6 +915,8 @@ footer a:hover { color: var(--yellow); }
   .mission-row p { grid-column: 2; }
   .prin-grid { grid-template-columns: 1fr; }
   .join-roles { grid-template-columns: repeat(2, 1fr); }
+  .join-layout { flex-direction: column; }
+  .join-video { flex: none; width: 100%; }
   .tg-inner { padding: 56px 28px; }
   .hero-meta { flex-wrap: wrap; gap: 24px; }
 }
