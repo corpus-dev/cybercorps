@@ -119,8 +119,8 @@ title: Головна
   <h2 class="reveal">Долучайся <span class="y">вже сьогодні</span></h2>
   <div class="join-layout">
     <div class="join-video reveal">
-      <video controls preload="metadata">
-        <source src="{{ site.baseurl }}/assets/video/cyberowl_user_guide.mkv" type="video/mp4">
+      <video id="join-player" controls preload="metadata" playsinline>
+        <source src="{{ site.baseurl }}/assets/video/cyberowl_user_guide.mp4" type="video/mp4">
       </video>
     </div>
     <div class="join-text">

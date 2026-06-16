@@ -142,4 +142,13 @@
   document.querySelectorAll("h1 .word").forEach(function (w, i) {
     w.style.animationDelay = 0.15 + i * 0.09 + "s";
   });
+
+  /* ---------- Plyr video player ---------- */
+  if (document.getElementById("join-player") && typeof Plyr !== "undefined") {
+    new Plyr("#join-player", {
+      controls: ["play-large", "play", "progress", "current-time", "duration", "mute", "volume", "fullscreen"],
+      resetOnEnd: false,
+      tooltips: { controls: false }
+    });
+  }
 })();
