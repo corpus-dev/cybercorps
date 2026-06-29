@@ -83,6 +83,30 @@
   window.addEventListener("scroll", onScroll, { passive: true });
   onScroll();
 
+  /* ---------- mobile nav toggle ---------- */
+  var navToggle = document.querySelector(".nav-toggle");
+  if (navToggle && nav) {
+    function closeNav() {
+      nav.classList.remove("nav-open");
+      navToggle.classList.remove("open");
+      navToggle.setAttribute("aria-expanded", "false");
+    }
+    navToggle.addEventListener("click", function () {
+      var open = nav.classList.toggle("nav-open");
+      navToggle.classList.toggle("open", open);
+      navToggle.setAttribute("aria-expanded", String(open));
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape") closeNav();
+    });
+    document.addEventListener("click", function (e) {
+      if (nav.classList.contains("nav-open") && !nav.contains(e.target)) closeNav();
+    });
+    nav.querySelectorAll(".nav-links a").forEach(function (a) {
+      a.addEventListener("click", closeNav);
+    });
+  }
+
   /* ---------- scroll reveal ---------- */
   var observer = new IntersectionObserver(
     function (entries) {
